@@ -2,14 +2,23 @@ import './App.css';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import Note from './components/Note';
+import notes from './notes'
 
-function App() {
+
+const App = () => {
   return (
     <div className="App">
       <Header />
-      <Note />
+      {notes.map((note) => (
+          <Note
+            key={note.key}
+            title={note.title}
+            content={note.content}
+          />
+      ))}
       <Footer />
     </div>
+  
   );
 }
 
