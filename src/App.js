@@ -34,7 +34,7 @@ const [notes, setNotes]  = useState([]);
       {notes.map((note, index) => (
           <Note
             id={index}
-            key={index}
+            key={index + 1}
             title={note.title}
             content={note.content}
             onDelete={onDelete}
